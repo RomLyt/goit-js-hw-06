@@ -20,6 +20,8 @@ const ollImages = images.map(image => {
   const imageEl = document.createElement('img');
   imageEl.src = image.url;
   imageEl.alt = image.alt;
+  imageEl.classList.add('.image');
+  
   blockEl.appendChild(imageEl);
 
   return blockEl;
