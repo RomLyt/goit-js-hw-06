@@ -15,16 +15,8 @@ const images = [
 
 const galleryBlock = document.querySelector('.gallery')
 
-const ollImages = images.map(image => {
-  const blockEl = document.createElement('li');
-  const imageEl = document.createElement('img');
-  imageEl.src = image.url;
-  imageEl.alt = image.alt;
-  imageEl.classList.add('.image');
-  
-  blockEl.appendChild(imageEl);
+const ollImages = images.map(({url, alt}) => `<li><img src=${url} alt=${alt} width=360px></li>`);
 
-  return blockEl;
-})
+galleryBlock.insertAdjacentHTML("afterbegin", ollImages);
 
-galleryBlock.append(...ollImages);
+galleryBlock.style.display = 'flex';
