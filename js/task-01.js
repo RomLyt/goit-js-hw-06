@@ -1,5 +1,5 @@
 const ollCategories = document.querySelectorAll('#categories ul');
-// const ollCategories = document.querySelectorAll('#categories h2');
+
 console.log(`Number of categories: ${ollCategories.length}`);
 
 const ollElements = document.querySelectorAll('.item');
